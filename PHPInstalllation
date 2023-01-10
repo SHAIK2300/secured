@@ -1,0 +1,30 @@
+Installing PHP on Ubuntu is a relatively straightforward process. Here's a step-by-step guide on how to do it:
+
+First, update your package list by running the following command:
+Copy code
+sudo apt-get update
+Next, install the PHP package and any dependencies by running:
+Copy code
+sudo apt-get install php
+This will install the latest version of PHP available in the default Ubuntu repositories.
+
+Once the installation is complete, you can check which version of PHP is currently installed by running:
+Copy code
+php -v
+In case if you want to use specific version of php. You need to use this command:
+Copy code
+sudo apt-get install -y php7.4
+Finally, you'll also likely want to install some additional PHP modules.
+Copy code
+sudo apt-get install php-{module_name}
+for example for mysql you can use
+
+Copy code
+sudo apt-get install php-mysql
+For configuring the PHP for apache. you can use the following command:
+Copy code
+sudo a2enmod php7.4
+sudo systemctl restart apache2
+Once you've completed these steps, PHP should be fully installed and configured on your Ubuntu system.
+
+Note: The commands above assume that you are using the Apache web server. If you are using a different web server, the process of configuring PHP may be slightly different.
